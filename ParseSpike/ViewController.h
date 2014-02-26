@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ReactiveCocoa/ReactiveCocoa/ReactiveCocoa.h>
 
 @interface ViewController : UIViewController
+
+- (IBAction)topBtnHandler:(id)sender;
+- (IBAction)bottomBtnHandler:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *blockingLabel;
+
+@property (weak, nonatomic) IBOutlet UITextView *topTextView;
+@property (weak, nonatomic) IBOutlet UITextView *bottomTextView;
 
 @end

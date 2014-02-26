@@ -1,0 +1,18 @@
+PODS:
+  - Facebook-iOS-SDK (3.12.0)
+  - ReactiveCocoa (2.2.4):
+    - ReactiveCocoa/Core
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/Core (2.2.4):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.2.4)
+
+DEPENDENCIES:
+  - Facebook-iOS-SDK (~> 3.12.0)
+  - ReactiveCocoa
+
+SPEC CHECKSUMS:
+  Facebook-iOS-SDK: c09f7d80db5c48170ff834bc03ebe774c49d1f5b
+  ReactiveCocoa: 953a45dda30674fe704d1d9c77cc874141742f47
+
+COCOAPODS: 0.29.0

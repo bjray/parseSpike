@@ -8,11 +8,23 @@
 
 #import "AppDelegate.h"
 
+#define PF_APP_ID @"9ILuGQbYRPPCjss1Y1yPnto5MLjxz1iYshSc5Fz8"
+#define PF_CLIENT_KEY @"seD1rhtS5UjYI6hsJWLORZ6aDhlyaDNnHoGivEXL"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    [Parse setApplicationId:PF_APP_ID clientKey:PF_CLIENT_KEY];
+    // Set default ACLs
+    PFACL *defaultACL = [PFACL ACL];
+    [defaultACL setPublicReadAccess:YES];
+    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     return YES;
 }
 							

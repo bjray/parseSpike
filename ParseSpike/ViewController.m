@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "ActivityManager.h"
 
 @interface ViewController ()
-
+@property (nonatomic, retain) ActivityManager *manager;
 @end
 
 @implementation ViewController
@@ -17,7 +18,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.manager = [[ActivityManager alloc] init];
+    
+    //self.blockingLabel.text = @"Not Blocked";
+    
+    [[RACObserve(self.manager, someActivities)
+      deliverOn:RACScheduler.mainThreadScheduler]
+     subscribeNext:^(NSArray *objects) {
+         NSLog(@"Observe got a fish!");
+         self.topTextView.text = [NSString stringWithFormat:@"We received %d activities", objects.count];
+         self.blockingLabel.text = @"Not Blocked";
+     }];
+	
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +38,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)topBtnHandler:(id)sender {
+    self.blockingLabel.text = @"Blocked";
+    [self.manager fetchActivityTypesUsingDelegate];
+    
+}
+
+- (IBAction)bottomBtnHandler:(id)sender {
+    self.blockingLabel.text = @"Blocked";
+    [[self.manager fetchActivityTypes] subscribeNext:^(NSArray *activities) {
+        self.bottomTextView.text = [NSString stringWithFormat:@"We received %d activities", activities.count];
+        self.blockingLabel.text = @"Not Blocked";
+    }];
+}
 @end
