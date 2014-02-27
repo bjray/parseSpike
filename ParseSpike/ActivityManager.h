@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa/ReactiveCocoa.h>
 #import "ParseApiDelegate.h"
+#import "DataFetching.h"
 
 @interface ActivityManager : NSObject <ParseApiDelegate>
 - (RACSignal *)fetchActivityTypes;
 - (void)fetchActivityTypesUsingDelegate;
+- (id)initWithDataSource:(id<DataFetching>)dataSource;
 
 @property (nonatomic, retain)NSArray *someActivities;
 @end

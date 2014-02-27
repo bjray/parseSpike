@@ -11,15 +11,20 @@
 #import "ParseApi.h"
 
 @interface ActivityManager()
-@property (nonatomic, strong) ParseApi *api;
+@property (nonatomic, strong) id<DataFetching> api;
 @end
 
 @implementation ActivityManager
 
 - (id)init {
+    ParseApi *api = [[ParseApi alloc] init];
+    return [self initWithDataSource:api];
+}
+
+- (id)initWithDataSource:(id<DataFetching>)dataSource {
     self = [super init];
     if (self) {
-        self.api = [[ParseApi alloc] init];
+        self.api = dataSource;
         self.api.delegate = self;
         self.someActivities = [NSArray array];
     }

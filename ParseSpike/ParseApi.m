@@ -10,7 +10,7 @@
 #import "Activity.h"
 
 @implementation ParseApi
-
+@synthesize delegate;
 
 //Parse call made off main thread and calling back via delegate...
 - (void)fetchActivityTypesUsingDelegate {

@@ -38,6 +38,8 @@
 		B654AF6A18BEA2F100866FE5 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = B654AF6818BEA2F100866FE5 /* Activity.m */; };
 		B654AF6D18BEA3B600866FE5 /* ParseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = B654AF6C18BEA3B600866FE5 /* ParseApi.m */; };
 		B654AF6E18BEA3B600866FE5 /* ParseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = B654AF6C18BEA3B600866FE5 /* ParseApi.m */; };
+		B654AF7118BECD1800866FE5 /* testActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B654AF7018BECD1800866FE5 /* testActivityManager.m */; };
+		B654AF7418BECD8B00866FE5 /* MockApi.m in Sources */ = {isa = PBXBuildFile; fileRef = B654AF7318BECD8B00866FE5 /* MockApi.m */; };
 		BBBF156F6E214D5791A2E61F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6642EA12B3E24D78BAE6609A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,10 @@
 		B654AF6B18BEA3B600866FE5 /* ParseApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseApi.h; sourceTree = "<group>"; };
 		B654AF6C18BEA3B600866FE5 /* ParseApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseApi.m; sourceTree = "<group>"; };
 		B654AF6F18BEADF800866FE5 /* ParseApiDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseApiDelegate.h; sourceTree = "<group>"; };
+		B654AF7018BECD1800866FE5 /* testActivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testActivityManager.m; sourceTree = "<group>"; };
+		B654AF7218BECD8B00866FE5 /* MockApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockApi.h; sourceTree = "<group>"; };
+		B654AF7318BECD8B00866FE5 /* MockApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockApi.m; sourceTree = "<group>"; };
+		B654AF7618BECE3300866FE5 /* DataFetching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFetching.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,7 @@
 		B654AF1B18BE984400866FE5 /* ParseSpike */ = {
 			isa = PBXGroup;
 			children = (
+				B654AF7518BECDCE00866FE5 /* protocols */,
 				B654AF6B18BEA3B600866FE5 /* ParseApi.h */,
 				B654AF6C18BEA3B600866FE5 /* ParseApi.m */,
 				B654AF6318BEA2D600866FE5 /* ActivityManager.h */,
@@ -186,7 +193,6 @@
 				B654AF1C18BE984400866FE5 /* Supporting Files */,
 				B654AF6718BEA2F100866FE5 /* Activity.h */,
 				B654AF6818BEA2F100866FE5 /* Activity.m */,
-				B654AF6F18BEADF800866FE5 /* ParseApiDelegate.h */,
 			);
 			path = ParseSpike;
 			sourceTree = "<group>";
@@ -205,7 +211,10 @@
 		B654AF3A18BE984400866FE5 /* ParseSpikeTests */ = {
 			isa = PBXGroup;
 			children = (
+				B654AF7018BECD1800866FE5 /* testActivityManager.m */,
 				B654AF4018BE984400866FE5 /* ParseSpikeTests.m */,
+				B654AF7218BECD8B00866FE5 /* MockApi.h */,
+				B654AF7318BECD8B00866FE5 /* MockApi.m */,
 				B654AF3B18BE984400866FE5 /* Supporting Files */,
 			);
 			path = ParseSpikeTests;
@@ -218,6 +227,15 @@
 				B654AF3D18BE984400866FE5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B654AF7518BECDCE00866FE5 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B654AF6F18BEADF800866FE5 /* ParseApiDelegate.h */,
+				B654AF7618BECE3300866FE5 /* DataFetching.h */,
+			);
+			name = protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,10 +383,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B654AF7418BECD8B00866FE5 /* MockApi.m in Sources */,
 				B654AF6618BEA2D600866FE5 /* ActivityManager.m in Sources */,
 				B654AF6A18BEA2F100866FE5 /* Activity.m in Sources */,
 				B654AF6E18BEA3B600866FE5 /* ParseApi.m in Sources */,
 				B654AF4118BE984400866FE5 /* ParseSpikeTests.m in Sources */,
+				B654AF7118BECD1800866FE5 /* testActivityManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  ParseApi.h
+//  MockApi.h
 //  ParseSpike
 //
 //  Created by B.J. Ray on 2/26/14.
@@ -7,9 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ParseApiDelegate.h"
-#import "DataFetching.h"
 
-@interface ParseApi : NSObject <DataFetching>
+@interface MockApi : NSObject
 
 @end

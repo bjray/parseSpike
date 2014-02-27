@@ -19,8 +19,8 @@
 {
     [super viewDidLoad];
     self.manager = [[ActivityManager alloc] init];
+    // Note: Could have called initWithDataSource:<#(id<DataFetching>)#>
     
-    //self.blockingLabel.text = @"Not Blocked";
     
     [[RACObserve(self.manager, someActivities)
       deliverOn:RACScheduler.mainThreadScheduler]
