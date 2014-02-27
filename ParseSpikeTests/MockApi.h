@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DataFetching.h"
 
-@interface MockApi : NSObject
-
+@interface MockApi : NSObject <DataFetching>
+@property (nonatomic, retain) NSArray *mockObjects;
 @end

@@ -14,5 +14,4 @@
 
 - (NSArray *)fetchActivityTypes;
 - (void)fetchActivityTypesUsingDelegate;
-- (id)init;
 @end

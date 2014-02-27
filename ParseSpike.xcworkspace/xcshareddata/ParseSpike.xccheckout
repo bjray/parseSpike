@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>060152E4-569C-4AAC-96F3-D089F09C9BCC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ParseSpike</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>658D3FD1-2827-4531-B5BE-70F5495A1D46</key>
+		<string>https://github.com/bjray/parseSpike.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ParseSpike.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>658D3FD1-2827-4531-B5BE-70F5495A1D46</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bjray/parseSpike.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>658D3FD1-2827-4531-B5BE-70F5495A1D46</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>658D3FD1-2827-4531-B5BE-70F5495A1D46</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ParseSpike</string>
+		</dict>
+	</array>
+</dict>
+</plist>

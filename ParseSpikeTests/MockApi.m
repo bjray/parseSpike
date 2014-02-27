@@ -9,5 +9,12 @@
 #import "MockApi.h"
 
 @implementation MockApi
+@synthesize delegate;
 
+- (NSArray *)fetchActivityTypes {
+    return self.mockObjects;
+}
+- (void)fetchActivityTypesUsingDelegate {
+    
+}
 @end
