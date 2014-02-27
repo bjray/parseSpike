@@ -7,12 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
 #import "ActivityManager.h"
-#import "MockApi.h"
+#import "DataFetching.h"
+#import "ParseApi.h"
 
 @interface testActivityManager : XCTestCase
 @property (nonatomic,retain) ActivityManager *manager;
-@property (nonatomic, retain) MockApi *mockApi;
 @end
 
 @implementation testActivityManager
@@ -34,6 +35,7 @@
 - (void)testExample
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    id myMock = [OCMockObject mockForClass:[ParseApi class]];
 }
 
 @end
